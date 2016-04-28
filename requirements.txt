@@ -4,3 +4,4 @@ flake8==2.5.4
 jupyter==1.0.0
 matplotlib==1.5.1
 scikit-learn==0.17.1
+scipy-0.17.0
