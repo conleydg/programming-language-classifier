@@ -1,0 +1,6 @@
+.DS_Store
+.envrc
+.direnv
+__pycache__
+*.pyc
+benchmarksgame-2014-08-31/
