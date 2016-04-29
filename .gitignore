@@ -6,3 +6,4 @@ __pycache__
 benchmarksgame-2014-08-31/
 .ipynb_checkpoints/
 data/
+test/
