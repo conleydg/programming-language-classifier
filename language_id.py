@@ -32,13 +32,10 @@ x_texts = []
 y_file_type = []
 
 
-
 file_types = ['gcc', 'c', 'csharp', 'sbcl', 'clojure', 'java', 'javascript', 'ocaml', 'perl', 'hack', 'php', 'python3', 'jruby', 'yarv', 'scala', 'racket', 'ghc']
 
 for ft in file_types:
     read_code('/Users/David/documents/tiy/programming-language-classifier/benchmarksgame-2014-08-31/benchmarksgame/bench/', ft)
-
-
 
 
 # ***
@@ -94,3 +91,29 @@ for n in list(range(1,25)) + list(range(28,32)):
         count += 1
         # print(predicter[0])
 print(num_correct/len(bryce_tests))
+
+
+
+
+x_texts = []
+y_file_type = []
+
+
+file_types = ['gcc', 'c', 'csharp', 'sbcl', 'clojure', 'java', 'javascript', 'ocam', 'perl', 'hack', 'php', 'python3', 'jruby', 'yarv', 'scala', 'racket', 'ghc', 'cs']
+
+
+for ft in file_types:
+    try:
+        read_code('/Users/David/documents/tiy/programming-language-classifier/data/', ft)
+    except:
+        pass
+
+file_dict = dict(zip(x_texts, y_file_type))
+
+correct_count = 0
+for key, value in file_dict.items():
+    predicter = pipeline.predict([key])
+    if predicter == value:
+        correct_count += 1
+
+print(correct_count/len(file_dict))
