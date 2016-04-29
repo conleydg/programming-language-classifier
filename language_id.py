@@ -46,16 +46,8 @@ pipeline_map = [
                 ]
 
 
-
-# pipeline_map = [('hashin', CountVectorizer()),
-#                 ('feature_selection', SelectFromModel(svm.LinearSVC())),
-#                 ('tfidf', TfidfTransformer()),
-#                 ('bayes', MultinomialNB()),
-#                 ]
-
-
 pipeline = Pipeline(pipeline_map)
-#
+
 
 
 X_train, X_test, y_train, y_test = train_test_split(
